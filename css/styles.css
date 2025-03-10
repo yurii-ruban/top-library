@@ -41,6 +41,10 @@ sidebar {
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background-color: brown;
     grid-column: 2 / -1;
     grid-row: 2 / -1;
