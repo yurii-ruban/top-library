@@ -17,16 +17,125 @@
     <script defer src="./js/library.js"></script>
 </head>
 
-<body>
+<body class="sb-expanded">
     <header>
         <a href="#" noopener norefferer>
-            <h1 class="main-logo">My fucking awesome library</h1>
+            <h1 class="main-logo">My awesome library</h1>
         </a>
     </header>
-    <sidebar></sidebar>
-    <main>
-        <img src="./img/read.svg" width="50px" height="50px" alt="Have read picture"/>
-        <img src="./img/not_read.svg" width="50px" height="50px" alt="Haven't read picture"/>
+    <sidebar>        
+        <div class="sidebar-content">
+            <h2 class="sidebar-header">Add your book</h2>
+            <form>
+                <div class="controlgroup">
+                    <label for="title">Title</label>
+                    <input type="text" id="title">
+                </div>
+                <div class="controlgroup">
+                    <label for="author">Author</label>
+                    <input type="text" id="author">
+                </div>
+                <div class="controlgroup">
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages">
+                </div>
+                
+                <div class="checkbox">
+                    <input type="checkbox" id="read"/>
+                    <label for="read">I have already read this book</label>
+                </div>
+
+                <button type="submit">Add to the library</button>
+            </form>
+        </div>
+        <button type="button" class="sidebar-expander">
+            <img class="closed" src="./img/arrow_closed.svg" width="40px" height="40px" alt="Sidebar open">
+            <img class="opened" src="./img/arrow_opened.svg" width="40px" height="40px" alt="Sidebar close">
+        </button>
+    </sidebar>
+    <main class="expanded">
+        <h2 class="main-header">Currently in the library</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="info">
+                    <h3 class="title">The Harry Potter and the Azkaban prisoner</h3>
+                    <p class="author">Author: J.K. Roaling</p>
+                    <p class="pages">Total pages: 321</p>
+                </div>
+                <div class="controls">
+                    <button class="haveread" type="button">
+                        <img src="./img/read.svg" width="24px" height="24px" alt="Have read picture" />
+                    </button>
+                    <button class="remove-book" type="button">Remove this book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h3 class="title">The Harry Potter and the Azkaban prisoner</h3>
+                    <p class="author">Author: J.K. Roaling</p>
+                    <p class="pages">Total pages: 321</p>
+                </div>
+                <div class="controls">
+                    <button class="haveread" type="button">
+                        <img src="./img/read.svg" width="24px" height="24px" alt="Have read picture" />
+                    </button>
+                    <button class="remove-book" type="button">Remove this book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h3 class="title">The Harry Potter and the Azkaban prisoner</h3>
+                    <p class="author">Author: J.K. Roaling</p>
+                    <p class="pages">Total pages: 321</p>
+                </div>
+                <div class="controls">
+                    <button class="haveread" type="button">
+                        <img src="./img/read.svg" width="24px" height="24px" alt="Have read picture" />
+                    </button>
+                    <button class="remove-book" type="button">Remove this book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h3 class="title">The Harry Potter and the Azkaban prisoner</h3>
+                    <p class="author">Author: J.K. Roaling</p>
+                    <p class="pages">Total pages: 321</p>
+                </div>
+                <div class="controls">
+                    <button class="haveread" type="button">
+                        <img src="./img/read.svg" width="24px" height="24px" alt="Have read picture" />
+                    </button>
+                    <button class="remove-book" type="button">Remove this book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h3 class="title">The Harry Potter and the Azkaban prisoner</h3>
+                    <p class="author">Author: J.K. Roaling</p>
+                    <p class="pages">Total pages: 321</p>
+                </div>
+                <div class="controls">
+                    <button class="haveread" type="button">
+                        <img src="./img/read.svg" width="24px" height="24px" alt="Have read picture" />
+                    </button>
+                    <button class="remove-book" type="button">Remove this book</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h3 class="title">The Harry Potter and the Azkaban prisoner</h3>
+                    <p class="author">Author: J.K. Roaling</p>
+                    <p class="pages">Total pages: 321</p>
+                    <p class="id">Identifier: d588603e-1bff-4a47-8385-fb9a5203f48a</p>
+                </div>
+                <div class="controls">
+                    <button class="haveread" type="button">
+                        <img src="./img/read.svg" width="24px" height="24px" alt="Have read picture" />
+                    </button>
+                    <button class="remove-book" type="button">Remove this book</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

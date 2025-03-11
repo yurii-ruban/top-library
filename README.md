@@ -11,6 +11,7 @@ https://yurii-ruban.github.io/top-library
  - CSS
     * Grid layout
     * Flexbox layout
+    * Positioning
  - JS
     * Working with `crypto` library
     * Working with `Prototypes`

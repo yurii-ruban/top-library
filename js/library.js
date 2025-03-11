@@ -24,3 +24,10 @@ function addBookToLibrary() {
 function removeBookFromLibrary(id) {
 
 }
+
+const resizeBtn = document.querySelector(".sidebar-expander");
+
+
+resizeBtn.addEventListener("click", function (e) {
+  document.body.classList.toggle("sb-expanded");
+});
