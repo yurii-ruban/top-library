@@ -10,6 +10,7 @@ body {
     display: grid;
     grid-template-columns: 0.3fr 1fr 6fr;
     grid-template-rows: 1fr 5fr;
+    min-height: 100vh;
 }
 
 h2 {
@@ -163,7 +164,7 @@ main {
             gap: 5em;
             background-color: var(--darker-bg);
             padding: 2em 1em;
-            border-radius: 7px;
+            border-radius: 10px;
 
             .info {
                 font-family: Ubuntu, sans-serif;
