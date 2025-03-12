@@ -75,9 +75,15 @@ function fillCardInfo(cardObj) {
   cardObj.cardPages.textContent = "Pages: " + lastBook.pages;
   cardObj.cardId.textContent = "Id: " + lastBook.getId();
   cardObj.cardContainer["id"] = lastBook.getId();
+
   cardObj.readImg.src = lastBook.read ? readSrc : notReadSrc;
   cardObj.removeBtn.textContent = "Remove this book";
   cardObj.removeBtn.addEventListener('click', removeBookFromLibrary);
+
+  cardObj.readBtn.addEventListener('click', event => {
+    lastBook.read = !lastBook.read;
+    cardObj.readImg.src = lastBook.read ? readSrc : notReadSrc;
+  });
 }
 
 
