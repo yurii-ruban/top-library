@@ -23,4 +23,4 @@ The **Library** project is the intermediate JS project to be acknowledged and ha
 The task is to create a library with possibility of adding/removing new books with their info. Also, regulate `read/unread` states.
 
 ## Screenshot
-![Screenshot]()
+![Screenshot](./img/Screenshot.png)

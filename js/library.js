@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 const readSrc = "./img/read.svg";
 const notReadSrc = "./img/not_read.svg";
 
@@ -74,8 +74,10 @@ function fillCardInfo(cardObj) {
   cardObj.cardAuthor.textContent = "Author: " + lastBook.author;
   cardObj.cardPages.textContent = "Pages: " + lastBook.pages;
   cardObj.cardId.textContent = "Id: " + lastBook.getId();
+  cardObj.cardContainer["id"] = lastBook.getId();
   cardObj.readImg.src = lastBook.read ? readSrc : notReadSrc;
   cardObj.removeBtn.textContent = "Remove this book";
+  cardObj.removeBtn.addEventListener('click', removeBookFromLibrary);
 }
 
 
@@ -92,15 +94,18 @@ function addBookToLibrary(clickEv) {
   const bookRead = Boolean(document.querySelector('#read').checked);
 
   myLibrary.push(new Book(bookName, bookAuthor, bookPages, bookRead));
-
   const cardMockup = createCard();
   fillCardInfo(cardMockup);
-
   libraryContainer.appendChild(cardMockup.cardContainer);
 }
 
-function removeBookFromLibrary(id) {
-
+function removeBookFromLibrary(event) {
+  const id = event.target.parentNode.parentNode.id;
+  myLibrary = myLibrary.filter((item) =>  {
+    return item.getId() !== id;
+  });
+  const itemToRemove = event.target.parentNode.parentNode;
+  itemToRemove.remove();
 }
 
 const resizeBtn = document.querySelector(".sidebar-expander");
